@@ -92,6 +92,10 @@
     {
       "packageName": "vsp-mode",
       "version": "0.0.1"
+    },
+    {
+      "packageName": "ai-mode",
+      "version": "0.0.1"
     }
   ],
   "public": [

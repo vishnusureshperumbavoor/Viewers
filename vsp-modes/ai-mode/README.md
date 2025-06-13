@@ -1,4 +1,4 @@
-# vsp-mode 
+# ai-mode 
 ## Description 
  
 ## Author 
