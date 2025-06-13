@@ -1,6 +1,7 @@
 import { hotkeys } from '@ohif/core';
-import { initToolGroups, toolbarButtons } from '@ohif/mode-longitudinal';
+import { initToolGroups } from '@ohif/mode-longitudinal';
 import { id } from './id';
+import toolbarButtons from './toolbarButtons';
 
 const ohif = {
   layout: '@ohif/extension-default.layoutTemplateModule.viewerLayout',
@@ -71,6 +72,7 @@ function modeFactory({ modeConfiguration }) {
         'PlanarFreehandROI',
         'SplineROI',
         'LivewireContour',
+        'SpineSegmentation',
       ]);
 
       toolbarService.updateSection('MoreTools', [
