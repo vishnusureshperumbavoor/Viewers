@@ -63,12 +63,12 @@
       "version": "3.0.0"
     },
     {
-      "packageName": "@vsp/ai-extensions",
-      "version": "0.0.1"
-    },
-    {
       "packageName": "@ohif/extension-ultrasound-pleura-bline",
       "version": "3.0.0"
+    },
+    {
+      "packageName": "ai-extension",
+      "version": "0.0.1"
     }
   ],
   "modes": [
@@ -98,12 +98,12 @@
       "version": "3.0.0"
     },
     {
-      "packageName": "@vsp/ai-mode",
-      "version": "0.0.1"
-    },
-    {
       "packageName": "@ohif/mode-ultrasound-pleura-bline",
       "version": "3.0.0"
+    },
+    {
+      "packageName": "ai-mode",
+      "version": "0.0.1"
     }
   ],
   "public": [
