@@ -7,7 +7,7 @@ const ohif = {
   sopClassHandler: '@ohif/extension-default.sopClassHandlerModule.stack',
   hangingProtocol: '@ohif/extension-default.hangingProtocolModule.default',
   leftPanel: '@ohif/extension-default.panelModule.seriesList',
-  rightPanel: '@ohif/extension-cornerstone.panelModule.panelMeasurement',
+  rightPanel: '@ohif/extension-cornerstone.panelModule.aiTools',
 };
 
 const cornerstone = {
@@ -74,6 +74,23 @@ function modeFactory({ modeConfiguration }) {
         'UltrasoundDirectionalTool',
         'WindowLevelRegion',
       ]);
+
+      toolbarService!.updateSection(toolbarService!.sections.segmentationToolbox, [
+        'SegmentationUtilities',
+        'SegmentationTools',
+      ]);
+      toolbarService!.updateSection('SegmentationUtilities', [
+        'LabelmapSlicePropagation',
+        'InterpolateLabelmap',
+        'SegmentBidirectional',
+      ]);
+      toolbarService!.updateSection('SegmentationTools', [
+        'BrushTools',
+        'MarkerLabelmap',
+        'RegionSegmentPlus',
+        'Shapes',
+      ]);
+      toolbarService!.updateSection('BrushTools', ['Brush', 'Eraser', 'Threshold']);
     },
     onModeExit: ({ servicesManager }: withAppTypes) => {
       const {
