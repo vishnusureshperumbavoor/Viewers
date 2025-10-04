@@ -1,9 +1,14 @@
 import { visitStudy } from './visitStudy';
 import { checkForScreenshot } from './checkForScreenshot';
 import { screenShotPaths } from './screenShotPaths';
-import { simulateClicksOnElement } from './simulateClicksOnElement';
+import {
+  simulateClicksOnElement,
+  simulateDoubleClickOnElement,
+  simulateNormalizedClickOnElement,
+  simulateNormalizedClicksOnElement,
+} from './simulateClicksOnElement';
 import { reduce3DViewportSize } from './reduce3DviewportSize';
-import { getMousePosition, initilizeMousePositionTracker } from './mouseUtils';
+import { getMousePosition, initializeMousePositionTracker } from './mouseUtils';
 import { getSUV } from './getSUV';
 import { getTMTVModalityUnit } from './getTMTVModalityUnit';
 import { clearAllAnnotations } from './clearAllAnnotations';
@@ -16,9 +21,12 @@ export {
   checkForScreenshot,
   screenShotPaths,
   simulateClicksOnElement,
+  simulateDoubleClickOnElement,
+  simulateNormalizedClickOnElement,
+  simulateNormalizedClicksOnElement,
   reduce3DViewportSize,
   getMousePosition,
-  initilizeMousePositionTracker,
+  initializeMousePositionTracker,
   getSUV,
   getTMTVModalityUnit,
   clearAllAnnotations,

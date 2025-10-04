@@ -121,7 +121,7 @@ function modeFactory({ modeConfiguration }) {
       toolbarService.updateSection('SegmentationUtilities', [
         'LabelmapSlicePropagation',
         'InterpolateLabelmap',
-        'SegmentBidirectional',
+'SegmentBidirectional',
       ]);
       toolbarService.updateSection('SegmentationTools', [
         'BrushTools',

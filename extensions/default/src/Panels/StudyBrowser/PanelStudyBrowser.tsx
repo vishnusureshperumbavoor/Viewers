@@ -35,9 +35,11 @@ function PanelStudyBrowser({
 
   const [{ activeViewportId, viewports, isHangingProtocolLayout }] = useViewportGrid();
   const [activeTabName, setActiveTabName] = useState(studyMode);
-  const [expandedStudyInstanceUIDs, setExpandedStudyInstanceUIDs] = useState([
-    ...StudyInstanceUIDs,
-  ]);
+  const [expandedStudyInstanceUIDs, setExpandedStudyInstanceUIDs] = useState(
+    studyMode === 'primary' && StudyInstanceUIDs.length > 0
+      ? [StudyInstanceUIDs[0]]
+      : [...StudyInstanceUIDs]
+  );
   const [hasLoadedViewports, setHasLoadedViewports] = useState(false);
   const [studyDisplayList, setStudyDisplayList] = useState([]);
   const [displaySets, setDisplaySets] = useState([]);
@@ -383,8 +385,6 @@ function PanelStudyBrowser({
     // Set the activeTabName and expand the study
     const thumbnailLocation = _findTabAndStudyOfDisplaySet(displaySetInstanceUID, tabs);
     if (!thumbnailLocation) {
-      console.warn('jumpToThumbnail: displaySet thumbnail not found.');
-
       return;
     }
     const { tabName, StudyInstanceUID } = thumbnailLocation;
