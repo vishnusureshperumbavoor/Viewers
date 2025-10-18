@@ -39,6 +39,25 @@ function createTools({ utilityModule, commandsManager }) {
       },
       {
         toolName: toolNames.MarkerLabelmap,
+        configuration: {
+          modelName: 'sam_b',
+          models: {
+            sam_b: [
+              {
+                name: 'sam-b-encoder',
+                url: 'https://huggingface.co/vishnusureshperumbavoor/sam2_onnx/resolve/main/sam2_encoder.onnx',
+                size: 180,
+                key: 'encoder',
+              },
+              {
+                name: 'sam-b-decoder',
+                url: 'https://huggingface.co/vishnusureshperumbavoor/sam2_onnx/resolve/main/sam2_decoder.onnx',
+                size: 17,
+                key: 'decoder',
+              },
+            ],
+          },
+        },
       },
       {
         toolName: toolNames.RegionSegmentPlus,
